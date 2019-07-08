@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "deep-extend": "^0.5.1",
+    "diff": "^3.5.0",
+    "handlebars": "^4.1.0",
+    "js-yaml": "^3.13.1",
+    "macaddress": "^0.2.9",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.13"
+    "react-scripts": "1.0.13",
+    "sshpk": "^1.13.2"
   },
   "scripts": {
     "start": "react-scripts start",
