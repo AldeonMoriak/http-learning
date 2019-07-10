@@ -24,6 +24,8 @@
     "react": "^16.0.0",
     "react-dev-utils": "^4.2.2",
     "react-dom": "^16.0.1",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "1.0.13",
     "sshpk": "^1.13.2",
     "stringstream": "0.0.6",
