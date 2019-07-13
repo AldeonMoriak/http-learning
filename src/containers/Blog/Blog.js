@@ -2,6 +2,9 @@ import React, { Component } from "react";
 // import axios from "axios";
 import "./Blog.css";
 import Posts from "./Posts/Posts";
+import { Route, NavLink, Switch } from "react-router-dom";
+import NewPost from "./NewPost/NewPost";
+// import FullPost from "./FullPost/FullPost";
 
 class Blog extends Component {
   render() {
@@ -11,15 +14,37 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <NavLink
+                  to="/posts/"
+                  exact
+                  activeClassName="active-aldeon"
+                  activeStyle={{
+                    color: "#fa923f",
+                    textDecoration: "underline"
+                  }}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a href="/new-post">New Post</a>
+                <NavLink
+                  to={{
+                    pathname: "/new-post",
+                    hash: "#submit",
+                    search: "?quick-submit=true"
+                  }}
+                >
+                  New Post
+                </NavLink>
               </li>
             </ul>
           </nav>
         </header>
-        <Posts />
+        {/* <Route path="/" exact render={() => <h1>Home</h1>} /> */}
+        <Switch>
+          <Route path="/new-post" component={NewPost} />
+          <Route path="/posts/" component={Posts} />
+        </Switch>
       </div>
     );
   }
